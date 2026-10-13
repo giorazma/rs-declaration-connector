@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "personal_rs": {
+      "command": "C:/path/to/rs-declaration-connector/.venv/Scripts/python.exe",
+      "args": ["C:/path/to/rs-declaration-connector/server.py"],
+      "env": {
+        "RS_LEDGER_PATH": "C:/path/to/rs-declaration-connector/private-data/incomes.sqlite3",
+        "PYTHONUTF8": "1"
+      }
+    }
+  }
+}
