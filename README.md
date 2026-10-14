@@ -42,6 +42,12 @@ python -m venv .venv
 
 `codex-config.example.toml` ან `mcp-config.example.json` ფაილში შეცვალე გზები შენი პროექტის გზებით. კლიენტის არსებულ კონფიგურაციას ემატება მხოლოდ `personal_rs` სერვერი. ჩვეულებრივი Python გარემოსთვის `RS_MCP_RUNTIME` საჭირო არ არის; იგი სურვილისამებრ გამოიყენება `pip --target` დამოკიდებულებების გზისთვის.
 
+Codex-ისთვის მომზადებული TOML ბლოკი დაამატე `~/.codex/config.toml`-ში და გადატვირთე აპი. ასევე შეგიძლია Settings → MCP servers → Add server-ში აირჩიო STDIO და მიუთითო მაგალითიდან command, args და env. კონექტორის სახელი იქნება `personal_rs`.
+
+Claude Desktop-ში გახსენი Settings → Developer → Edit Config. Windows-ზე ნაგულისხმევი ფაილია `%APPDATA%\Claude\claude_desktop_config.json`. JSON მაგალითიდან `personal_rs` ჩანაწერი დაამატე არსებულ `mcpServers` ობიექტს, შეინახე და სრულად დახურე/ხელახლა გაუშვი Claude Desktop. არსებული სხვა სერვერები შეინარჩუნე. ეს ლოკალური კავშირი გამოიყენება Desktop ჩატში; GitHub-ის URL MCP სერვერის მისამართი არ არის.
+
+პირველი მოთხოვნა: „personal_rs-ის get_connector_status გამოიძახე“. უნდა დაბრუნდეს `rs_submission: false`. კურსის შესამოწმებლად გამოიყენე `convert_receipt`, რომელიც თანხას აღრიცხვაში არ ინახავს. RS.GE-ზე შესასვლელად სთხოვე `open_rs_browser`; პაროლი და SMS კოდი მხოლოდ გახსნილ RS.GE გვერდზე შეიყვანე.
+
 ## შემოწმება
 
 ```powershell
@@ -77,6 +83,7 @@ Git-ში ინახება კოდი, ტესტები, დამ�
 - [RS.GE-ის სერვისების დოკუმენტაცია](https://eservices.rs.ge/Downloads.aspx)
 - [ოფიციალური MCP Python SDK](https://py.sdk.modelcontextprotocol.io/)
 - [OpenAI-ის ოფიციალური MCP ინსტრუქცია](https://learn.chatgpt.com/docs/extend/mcp?surface=cli)
+- [Claude Desktop-ის ლოკალური MCP ინსტრუქცია](https://modelcontextprotocol.io/docs/develop/connect-local-servers)
 - [GitHub-ის რეპოზიტორიები](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories)
 - [Git-ში ფაილების გამორიცხვა](https://docs.github.com/en/get-started/git-basics/ignoring-files)
 

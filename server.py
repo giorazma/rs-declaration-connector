@@ -80,7 +80,7 @@ def get_connector_status() -> dict:
     return {'version': '0.1.0', 'official_nbg_rates': True, 'local_receipt_ledger': True,
             'monthly_preparation': True, 'rs_form_adapter_implemented': True,
             'rs_form_adapter_live_tested': False, 'rs_submission': False,
-            'credentials_stored': False, 'host_configuration_installed': False}
+            'credentials_stored': False, 'host_configuration_detection': 'unavailable'}
 
 
 @server.tool(annotations=PUBLIC_READ)
